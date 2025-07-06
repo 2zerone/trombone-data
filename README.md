@@ -81,7 +81,8 @@ npm run test:ui
 npm run test:report
 
 # 특정 테스트 파일 실행
-npx playwright test tests/trombone_test.spec.js
+npx playwright test tests/trombone_test.spec.js --headed
+npx playwright test tests/trombone_test_2seconds.spec.js --headed
 ```
 
 ---
@@ -115,13 +116,29 @@ TEST001-결재컴포넌트(결재자) 워크플로우 컴포넌트가 정상적�
 
 ```
 uitest/
+├── config/
+│   └── test-settings.json          # 테스트 설정 파일 (로그인 정보, 프로젝트 정보 등)
 ├── tests/
-│   ├── trombone.spec.js  # 메인 자동화 스크립트
-│   ├── pipeline-stg.txt             # STG 파이프라인 설정
-│   └── pipeline-prd.txt             # PRD 파이프라인 설정
-├── playwright.config.js             # Playwright 설정
-└── package.json                     # 프로젝트 설정
+│   ├── trombone_test.spec.js       # 메인 자동화 스크립트 (최적화된 버전)
+│   ├── trombone_test_2seconds.spec.js  # 2초 딜레이 버전 (과정 관찰용)
+│   ├── pipeline-stg.txt            # STG 파이프라인 설정
+│   └── pipeline-prd.txt            # PRD 파이프라인 설정
+├── playwright.config.js            # Playwright 설정
+└── package.json                    # 프로젝트 설정
 ```
+
+## 📁 파일 설명
+
+### 테스트 파일
+- **`trombone_test.spec.js`**: 메인 테스트 파일입니다. 2초 대기를 제거하여 빠른 실행을 위해 최적화되었습니다.
+- **`trombone_test_2seconds.spec.js`**: 각 단계마다 2초씩 대기하여 테스트 과정을 자세히 관찰할 수 있는 버전입니다.
+
+### 설정 파일
+- **`config/test-settings.json`**: 테스트에 필요한 모든 설정 정보를 포함합니다.
+  - 로그인 정보 (아이디, 비밀번호)
+  - 프로젝트 정보 (프로젝트 코드, 프로젝트명)
+  - 저장소 정보 (저장소명)
+  - 사용자 정보 (사용자 ID, 이름, 이메일, 역할 등)
 
 ---
 
