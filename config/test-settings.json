@@ -1,0 +1,21 @@
+{
+  "login": {
+    "userId": "yh.lee5",
+    "password": "Okestro2018!"
+  },
+  "project": {
+    "code": "TEST003",
+    "name": "TEST 업무코드"
+  },
+  "repository": {
+    "name": "TEST-REPO"
+  },
+  "user": {
+    "id": "user003",
+    "name": "유저003",
+    "email": "user003@okestro.com",
+    "level": "주니어(01)",
+    "role": "빌드배포 관리자",
+    "systemRole": "시스템관리자(사용자)"
+  }
+} 
