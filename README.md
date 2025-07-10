@@ -74,7 +74,7 @@ npm run test:install
   },
   "project": {
     "code": "TEST001",
-    "name": "테스트 프로젝트"
+    "name": "TEST 업무코드"
   },
   "repository": {
     "name": "test-repository"
@@ -83,9 +83,9 @@ npm run test:install
     "id": "testuser",
     "name": "테스트 사용자",
     "email": "test@example.com",
-    "level": "L4",
-    "role": "개발자",
-    "systemRole": "개발자"
+    "level": "주니어(01)",
+    "role": "빌드배포 관리자",
+    "systemRole": "시스템관리자(사용자)"
   }
 }
 ```
@@ -239,4 +239,4 @@ uitest/
 ---
 
 ## 📅 최종 업데이트 날짜
-**최종 업데이트**: 2025년 7월 6일
+**최종 업데이트**: 2025년 7월 10일
