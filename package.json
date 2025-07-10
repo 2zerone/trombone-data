@@ -12,6 +12,9 @@
     "test:codegen": "playwright codegen",
     "test:stg": "playwright test --config=playwright.config.js",
     "test:prd": "playwright test --config=playwright.config.js",
+    "test:main": "playwright test tests/trombone-main.spec.js --headed",
+    "test:slow": "playwright test tests/trombone-main-slow.spec.js --headed",
+    "test:slow:debug": "playwright test tests/trombone-main-slow.spec.js --debug",
     "setup": "node scripts/setup-test-data.js",
     "test:setup": "npm run setup && npm run test",
     "test:login": "echo '환경 변수로 로그인 정보를 설정하세요:' && echo 'TROMBONE_USER_ID=your_id TROMBONE_PASSWORD=your_password npm run test tests/trombone.spec.js'"
